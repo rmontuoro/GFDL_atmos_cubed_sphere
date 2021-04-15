@@ -671,6 +671,7 @@ contains
         id_res = register_restart_field (GFS_restart, fn_gfs_ics, 't', temp, mandatory=.false., &
                                          domain=Atm%domain)
         ! prognostic tracers
+        q = 0.
         do nt = 1, ntracers
           call get_tracer_names(MODEL_ATMOS, nt, tracer_name)
           ! DH* if aerosols are in separate file, need to test for indices liq_aero and ice_aero and change fn_gfs_ics to fn_aero_ics *DH
